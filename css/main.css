@@ -165,7 +165,7 @@ header p{
     width: 100px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px), (max-height: 320px){
 
     header h1{
         font-size: 2rem;
