@@ -278,9 +278,9 @@ header p{
         display: block;
         width: 35px;
         height: 4px;
-        margin: 4px;
+        margin: 3px;
         float: right;
-        border-radius: 8px;
+        border-radius: 15px;
         background-color: rgb(77, 76, 76);
     }
     .close-button-container button{
@@ -293,7 +293,7 @@ header p{
     }
     .close-button-container span{
         display: block;
-        width: 40px;
+        width: 35px;
         height: 4px;
         margin: 4px;
         float: right;
