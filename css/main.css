@@ -3,11 +3,16 @@
     padding: 0;
     outline: none;
     font-family: 'Muli', sans-serif;
+    user-select: none;
 }
 body{
     position: relative;
+    overflow-x: hidden;
 }
 .non-displayed{
+    display: none;
+}
+.btn-open-menu-responsive{
     display: none;
 }
 nav{
@@ -91,17 +96,20 @@ header{
     height: 100vh;
 }
 .first-content button{
-    width: 55%;
+    width: 250px;
     padding: 14px;
     font-size: 1.1rem;
     background-color: #5AD9AC;
     border: none;
-    color: #fff;
     border-radius: 100px;
     font-weight: 500;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(51, 51, 51, 0.308);
     transition: all .3s ease-in-out;
+}
+.first-content button a{
+    color: #fff;
+    text-decoration: none;
 }
 .first-content button:hover{
     transition: all .3s ease-in-out;
@@ -122,14 +130,12 @@ header p{
 }
 
 /*SECTION SECTION*/
-
 #items{
     padding-top: 10vh;
     width: 85%;
     margin: auto;
     height: 80vh;
     text-align: center;
-    /* display: none; */
 }
 #items h2{
     width: 90%;
@@ -338,7 +344,8 @@ header p{
         padding: 10px;
         margin: 15px;
         text-decoration: none;
-        color: #333;
+        color: rgb(0, 0, 0);
+        font-size: 1.03rem;
     }
 }
 
@@ -378,11 +385,10 @@ header p{
         margin: auto;
         align-items: center;
         text-align: center;
-        width: 80vw;
+        width: 90%;
         height: 100%;
     }
     .first-content button{
-        width: 100%;
         padding: 14px;
         font-size: .9rem;
         background-color: #5AD9AC;
@@ -413,9 +419,8 @@ header p{
     }
     
     /*SECTION SECTION*/
-    
     #items{
-        padding-top: 10vh;
+        padding-top: 15vh;
         width: 95%;
         margin: auto;
         height: 80vh;
