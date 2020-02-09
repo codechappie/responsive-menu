@@ -7,7 +7,7 @@
 body{
     position: relative;
 }
-#menu-responsive{
+.non-displayed{
     display: none;
 }
 nav{
@@ -215,8 +215,10 @@ header p{
     .menu-options{
         display: none;
     }
+    .non-displayed{
+        display: none;
+    }
     #menu-responsive{
-        display: block;
         position: fixed;
         overflow: scroll;
         top: 0;
