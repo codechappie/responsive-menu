@@ -166,7 +166,7 @@ header p{
 }
 
 @media screen and (max-width: 768px), (max-height: 320px){
-
+    
     header h1{
         font-size: 2rem;
         width: 100%;
@@ -212,6 +212,18 @@ header p{
     nav{
         height: 80px;
     }
+    .nav-initial{
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 100%);
+        transition: all .3s ease-in-out;
+    }
+    .nav-colored{
+        background-color: #fff;
+        box-shadow: 4px 2px 11px rgba(0, 0, 0, 0.164);
+        transition: all .2s ease-in-out;
+        height: 70px;
+    }
+    
     .menu-options{
         display: none;
     }
@@ -331,49 +343,118 @@ header p{
 }
 
 @media screen and (max-width: 768px){
-header{
-    margin-bottom: 10px;
-}
-#items{
-    padding-top: 0vh;
-    width: 85%;
-    margin: auto;
-    height: 80vh;
-    text-align: center;
-    /* display: none; */
-}
-#items h2{
-    width: 90%;
-    margin: auto;
-    font-size: 1.5rem;
-}
-#items p{
-    font-size: 1rem;
-    margin: 20px auto;
-    font-weight: 400;
-    color: rgb(116, 116, 116);
-    font-weight: 300;
-}
-.container-items{
-    margin-top: 0px;
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    justify-items: center;
-}
-.container-items .item{
-    width: 200px
-}
-.container-items h3{
-    font-size: 1.2rem;
-    color: rgb(73, 73, 73);
-}
-.container-items .item p{
- margin: 10px auto!important;
- font-size: 1rem!important;
- color: rgb(126, 126, 126);
-}
-.container-items .item img{
-    width: 70px;
-}
 
+    header{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10vh;
+    }
+    .header-content{
+        width: 90%;
+        margin: auto;
+        margin-top: 80px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 2fr;
+    }
+    .image-bg{
+        width: 90%;
+        height: auto;
+        display: grid;
+        align-items: center;
+        justify-items: right;
+    }
+    .image-bg img{
+        margin-top: 1vh;
+        width: 90%;
+        height: auto;
+    }
+    
+    .first-content{
+        display: grid;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        width: 80vw;
+        height: 100%;
+    }
+    .first-content button{
+        width: 100%;
+        padding: 14px;
+        font-size: .9rem;
+        background-color: #5AD9AC;
+        border: none;
+        color: #fff;
+        border-radius: 100px;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px rgba(51, 51, 51, 0.308);
+        transition: all .3s ease-in-out;
+    }
+    .first-content button:hover{
+        transition: all .3s ease-in-out;
+        box-shadow: 2px 2px 5px rgba(51, 51, 51, 0.4198);
+    }
+    header h1{
+        font-size: 2rem;
+        width: 100%;
+        font-weight: 500;
+        color: rgb(66, 66, 66);
+    }
+    header p{
+        margin: 20px 0px;
+        font-size: .9rem;
+        width: 100%;
+        font-weight: 300;
+        color: rgb(119, 119, 119);
+    }
+    
+    /*SECTION SECTION*/
+    
+    #items{
+        padding-top: 10vh;
+        width: 95%;
+        margin: auto;
+        height: 80vh;
+        text-align: center;
+        /* display: none; */
+    }
+    #items h2{
+        width: 95%;
+        margin: auto;
+        font-size: 1rem;
+    }
+    #items p{
+        font-size: 1rem;
+        margin: 4px auto;
+        font-weight: 400;
+        color: rgb(116, 116, 116);
+        font-weight: 300;
+    }
+    .container-items{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+    .container-items .item{
+        width: 200px;
+        margin: 20px auto;
+    }
+    .container-items h3{
+        font-size: 1.1rem;
+        color: rgb(73, 73, 73);
+    }
+    .container-items .item p{
+     margin: 10px auto!important;
+     font-size: 1rem!important;
+     color: rgb(126, 126, 126);
+    }
+    .container-items .item img{
+        width: 80px;
+    }
+    
 }

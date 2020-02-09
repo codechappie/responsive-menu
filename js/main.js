@@ -2,6 +2,7 @@ window.onload = function () {
     const menuResponsive = document.getElementById("menu-responsive");
     const buttonOpenMenu = document.getElementById("btn-open-menu");
     const buttonCloseMenu = document.getElementById("btn-close-menu");
+    const btnOpenArrows= document.querySelector("#first");
 
     buttonOpenMenu.addEventListener("click", function openMenu() {
         menuResponsive.classList.add("slideInRight");
@@ -9,19 +10,18 @@ window.onload = function () {
         menuResponsive.classList.remove("non-displayed");
     });
     menuResponsive.addEventListener('animationend', function() { 
-        console.log("animacion terminada");
         menuResponsive.classList.remove("slideInRight");
-        buttonCloseMenu.addEventListener("click", function closeMenu() {        
+        buttonCloseMenu.addEventListener("click", function closeMenu() {                   
         menuResponsive.classList.add("slideOutRight");
         })
      });
 
-        buttonCloseMenu.addEventListener("hover", function closeMenu() {        
-            alert("hover");
+        // buttonCloseMenu.addEventListener("hover", function closeMenu() {        
+        //     alert("hover");
             
-            menuResponsive.classList.add("non-displayed");
-            menuResponsive.classList.remove("displayed");
-        });
+        //     menuResponsive.classList.add("non-displayed");
+        //     menuResponsive.classList.remove("displayed");
+        // });
     
 
     var myNav = document.getElementById('navbar');
