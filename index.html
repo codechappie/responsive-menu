@@ -98,11 +98,26 @@
     </section>
     <script src="js/main.js"></script>
     <script>
-        window.addEventListener("message", function(message){
-           if(message.origin == 'http://127.0.0.1:5500/'){
-                alert(message);
-           }
-        });
+        document.domain = "http://localhost:3000/";
+window.onmessage = function(e) {
+    if (e.origin !== "http://localhost:3000/") {
+        return;
+    }
+    var payload = JSON.parse(e.data);
+    switch(payload.method) {
+        case 'set':
+            localStorage.setItem(payload.key, JSON.stringify(payload.data));
+            break;
+        case 'get':
+            var parent = window.parent;
+            var data = localStorage.getItem(payload.key);
+            parent.postMessage(data, "*");
+            break;
+        case 'remove':
+            localStorage.removeItem(payload.key);
+            break;
+    }
+};
     </script>
 </body>
 
