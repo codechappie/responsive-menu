@@ -99,7 +99,9 @@
     <script src="js/main.js"></script>
     <script>
         window.addEventListener("message", function(message){
-            alert(message);
+           if(message.origin == 'http://127.0.0.1:5500/'){
+                alert(message);
+           }
         }
     </script>
 </body>
